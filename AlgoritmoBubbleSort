@@ -1,0 +1,38 @@
+Algoritmo "BubbleSort"
+Var
+
+   NUM : VETOR [1..5] DE INTEIRO
+   P : INTEIRO
+   QTDETESTE: INTEIRO
+   AUX: INTEIRO
+
+Inicio
+
+      PARA P DE 1 ATE 5 FACA
+           ESCREVAL ("DIGITE O ELEMENTO : ", P)
+           LEIA (NUM[P])
+      FIMPARA
+      
+      //ORDENANDO OS NÚMEROS NO VETOR:
+
+      // DETERMINANDO QUANTAS VEZES VAMOS COMPARAR OS NÚMEROS DO VETOR
+      QTDETESTE<- 5
+      ENQUANTO QTDETESTE >1 FACA
+               PARA P DE 1 ATE QTDETESTE - 1 FACA
+                    SE NUM[P] > NUM[P+1] ENTAO
+                       AUX <- NUM[P]
+                       NUM[P] <- NUM[P+1]
+                       NUM[P+1] <- AUX
+                    FIMSE
+               FIMPARA
+               
+               QTDETESTE<- QTDETESTE -1
+      FIMENQUANTO
+
+      // IMPRIMINDO VETOR ORDENADO
+      ESCREVAL ("VETOR ORDENADO: ")
+      PARA P DE 1 ATE 5 FACA
+           ESCREVA (NUM[P] , "-")
+      FIMPARA
+
+Fimalgoritmo
